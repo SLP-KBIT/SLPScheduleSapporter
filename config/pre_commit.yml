@@ -1,0 +1,11 @@
+---
+:console_log_remove: []
+:console_log_add:
+- :json
+- :merge_conflict
+- :migration
+- :pry
+- :rails
+- :ruby
+- :whitespace
+- :yaml
