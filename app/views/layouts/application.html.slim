@@ -1,5 +1,5 @@
 doctype html
-html
+html lang="ja"
   head
     title
       | SSS
@@ -7,4 +7,9 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    nav.navbar.navbar-default role="navigation"
+      .container-fluid
+        .navbar-header
+          a.navbar-brand href="#" SSSS
+
     = yield
