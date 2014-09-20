@@ -1,0 +1,29 @@
+/ TODO: 作成更新のメッセージ表示の切替
+h1 イベントの作成
+
+.row
+  .col-xs-8
+
+    = form_for event, class: "form" do |f|
+      .form-group
+        = f.label :title, "タイトル"
+        = f.text_field :title, class: "form-control"
+
+      .form-group
+        = f.label :location, "場所"
+        = f.text_field :location, class: "form-control"
+
+      .form-group
+        = f.label :start_at, "開始日時"
+        = f.text_field :start_at, class: "form-control"
+
+      .form-group
+        = f.label :end_at, "終了日時"
+        = f.text_field :end_at, class: "form-control"
+
+      .form-group
+        = f.label :content, "内容・詳細"
+        = f.text_area :content, class: "form-control", size: "x5"
+
+
+      = f.submit "登録", class: "btn btn-success"

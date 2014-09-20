@@ -4,7 +4,8 @@ table
     th 内容
     th 主催者
   - events.each do |event|
-    - event = event.decorate
-    td = link_to event.title, event_path(event)
-    td = event.short_content
-    td = event.user_name
+    tr
+      - event = event.decorate
+      td = link_to event.title, event_path(event)
+      td = event.short_content
+      td = event.user_name
