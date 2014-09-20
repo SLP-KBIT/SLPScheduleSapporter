@@ -9,3 +9,16 @@
 - :ruby
 - :whitespace
 - :yaml
+:checks_remove: []
+:checks_add:
+- :common
+- :console_log
+- :json
+- :merge_conflict
+- :migratin
+- :pry
+- :rails
+- :ruby
+- :whitespace
+- :yaml
+- :tabs
