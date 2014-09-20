@@ -1,6 +1,14 @@
 class EventDecorator < Draper::Decorator
   delegate_all
 
+  def short_content
+    h.truncate(object.content, lenght: 30, ommision: "...")
+  end
+
+  def user_name
+    object.user.name || "未設定"
+  end
+
   # Define presentation-specific methods here. Helpers are accessed through
   # `helpers` (aka `h`). You can override attributes, for example:
   #
