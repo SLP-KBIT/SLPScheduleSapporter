@@ -1,0 +1,25 @@
+- @event = @event.decorate
+
+h2 イベント詳細
+= link_to edit_event_path(@event), class: "btn btn-sm btn-primary" do
+  i.glyphicon.glyphicon-pencil
+
+table.event-show-table
+  tr
+    th タイトル
+    td = @event.title
+  tr
+    th 場所
+    td = @event.location
+  tr
+    th 開始日時
+    td = @event.start_at
+  tr
+    th 終了日時
+    td = @event.end_at
+  tr
+    th 主催者
+    td = @event.user_name
+  tr
+    th 概要
+    td = @event.content

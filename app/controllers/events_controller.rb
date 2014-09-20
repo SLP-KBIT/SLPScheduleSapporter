@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_event
+
   def index
     @events = Event.order(:id).all
   end
@@ -15,7 +17,17 @@ class EventsController < ApplicationController
     redirect_to events_path
   end
 
+  def show
+  end
+
+  def edit
+  end
+
   private
+
+  def find_event
+    @event = Event.where(id: params[:id]).first if params[:id]
+  end
 
   def event_params
     params.require(:event).permit(:title, :location, :start_at, :end_at, :content)

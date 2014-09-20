@@ -9,6 +9,10 @@ class EventDecorator < Draper::Decorator
     object.user.name || "未設定"
   end
 
+  def content
+    h.raw(object.content.gsub(/\n/, "<br>"))
+  end
+
   # Define presentation-specific methods here. Helpers are accessed through
   # `helpers` (aka `h`). You can override attributes, for example:
   #

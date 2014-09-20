@@ -1,5 +1,4 @@
-/ TODO: 作成更新のメッセージ表示の切替
-h1 イベントの作成
+h1 イベントの#{message}
 
 .row
   .col-xs-8
@@ -26,4 +25,4 @@ h1 イベントの作成
         = f.text_area :content, class: "form-control", size: "x5"
 
 
-      = f.submit "登録", class: "btn btn-success"
+      = f.submit message, class: "btn btn-success"
