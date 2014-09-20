@@ -1,0 +1,3 @@
+= form_tag event_attends_path(event), method: :post, remote: true do
+  = hidden_field_tag "attend[user_id]", current_user.id
+  = submit_tag "参加する", class: "btn btn-success"
