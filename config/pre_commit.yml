@@ -15,7 +15,7 @@
 - :console_log
 - :json
 - :merge_conflict
-- :migratin
+- :migration
 - :pry
 - :rails
 - :ruby
