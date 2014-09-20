@@ -4,6 +4,12 @@ class AttendsController < ApplicationController
   def create
     @attend = @event.attends.build(attend_params)
     @attend.save!
+    # redirect_to @event
+  end
+
+  def destroy
+    @attend = @event.attends.where(id: params[:id]).first
+    @attend.destroy
     redirect_to @event
   end
 

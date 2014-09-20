@@ -35,4 +35,5 @@ h2 = @event.title
     | 参加者一覧
     ul
     - @event.users.each do |user|
+      - user = user.decorate
       li = user.name
