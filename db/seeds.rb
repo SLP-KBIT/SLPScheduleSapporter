@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+hoge = User.create(email: "hoge@example.com", password: "hogehoge", password_confirmation: "hogehoge")
+
+hoge.events.create(title: "ハッカソン2014", content: "夏休みにSLPイベントとしてハッカソンをやろう\nテーマは自由\nぼっち参加も歓迎！！！ > 誰か")
