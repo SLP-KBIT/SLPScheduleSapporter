@@ -17,4 +17,8 @@ class Event < ActiveRecord::Base
   belongs_to :user
   has_many :attends
   has_many :users, through: :attends
+
+  scope :attend, -> (user_id) { where user_id: user_id }
+  scope :planning, -> { where('start_at > ?', DateTime.now) }
+  scope :finished, -> { where('end_at < ?',   DateTime.now) }
 end
