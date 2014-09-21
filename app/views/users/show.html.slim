@@ -1,0 +1,15 @@
+h1 ユーザ情報
+= link_to edit_user_path(current_user), class: "btn btn-sm btn-primary" do
+  i.glyphicon.glyphicon-pencil
+= link_to "パスワード変更", edit_user_password_path, class: "btn btn-sm btn-warning"
+
+table
+  tr
+    th  氏名
+    td  = @user.name
+  tr
+    th  アカウント名
+    td  = @user.account
+  tr
+    th  メールアドレス
+    td  = @user.email

@@ -20,8 +20,11 @@ html lang="ja"
               a href="#" link
             li
               a href="#" link
-          ul.nav.navbar-nav.navbar-right
-            li
-              = link_to "logout", destroy_user_session_path, method: :delete
+          - if current_user
+            ul.nav.navbar-nav.navbar-right
+              li
+                = link_to "profile", user_path(current_user)
+              li
+                = link_to "logout", destroy_user_session_path, method: :delete
     .container-fluid
       = yield
