@@ -26,5 +26,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable
   has_many :attends
   has_many :events, through: :attends
+  has_many :photos
   has_many :organizing_events, class: Event, foreign_key: :user_id
 end
