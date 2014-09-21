@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require jquery.datetimepicker
 //= require jquery.colorbox-min
+//= require_self
 //= require_tree .
