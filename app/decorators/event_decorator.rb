@@ -13,13 +13,11 @@ class EventDecorator < Draper::Decorator
     h.raw(object.content.gsub(/\n/, "<br>"))
   end
 
-  # Define presentation-specific methods here. Helpers are accessed through
-  # `helpers` (aka `h`). You can override attributes, for example:
-  #
-  #   def created_at
-  #     helpers.content_tag :span, class: 'time' do
-  #       object.created_at.strftime("%a %m/%d/%y")
-  #     end
-  #   end
+  def start_at
+    h.l object.start_at if object.start_at
+  end
 
+  def end_at
+    h.l object.end_at if object.end_at
+  end
 end

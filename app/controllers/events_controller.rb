@@ -4,6 +4,8 @@ class EventsController < ApplicationController
 
   def index
     @events = Event.order(:id).all
+    @attended_planning_events = current_user.events.planning.order(:id)
+    @attended_finished_events = current_user.events.merge(Event.finished).order(:id)
   end
 
   def new
@@ -21,6 +23,11 @@ class EventsController < ApplicationController
   end
 
   def edit
+  end
+
+  def update
+    @event.update(event_params)
+    redirect_to event_path(@event)
   end
 
   def destroy

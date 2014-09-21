@@ -3,4 +3,27 @@ h1 イベント
 = link_to new_event_path, class: "btn btn-sm btn-primary" do
   i.glyphicon.glyphicon-plus
 
-= render 'list', events: @events
+
+.panel.panel-default.event-panel
+  .panel-heading
+    ul.nav.nav-tabs role="tablist"
+      li
+        a href="#all" role="tab" data-toggle="tab" すべて
+      li
+        a href="#will" role="tab" data-toggle="tab" 参加予定
+      li
+        a href="#past" role="tab" data-toggle="tab" 参加済
+
+  .panel-body
+    .tab-content
+      .tab-pane#all
+        = render 'list', events: @events
+
+      .tab-pane#will
+        = render 'list', events: @attended_planning_events
+
+      .tab-pane#past
+        = render 'list', events: @attended_finished_events
+coffee:
+  $ ->
+    $('.nav-tabs a:first').click()

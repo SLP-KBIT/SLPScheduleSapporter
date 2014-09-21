@@ -18,4 +18,8 @@ class Event < ActiveRecord::Base
   has_many :attends
   has_many :users, through: :attends
   has_many :photos
+
+  scope :attend, -> (user_id) { where user_id: user_id }
+  scope :planning, -> { where('start_at > ?', DateTime.now) }
+  scope :finished, -> { where('end_at < ?',   DateTime.now) }
 end
