@@ -1,0 +1,45 @@
+ja:
+  activerecord:
+    models:
+      attend: attend  #g
+      comment: comment  #g
+      event: event  #g
+      tag: tag  #g
+      user: user  #g
+
+    attributes:
+      attend:
+        event: :activerecord.models.event  #g
+        user: :activerecord.models.user  #g
+
+      comment:
+        content: content  #g
+
+      event:
+        attends: attends  #g
+        content: content  #g
+        end_at: end_at  #g
+        location: location  #g
+        start_at: start_at  #g
+        title: title  #g
+        user: :activerecord.models.user  #g
+        users: users  #g
+
+      tag:
+        name: name  #g
+
+      user:
+        account: account  #g
+        attends: attends  #g
+        current_sign_in_at: current_sign_in_at  #g
+        current_sign_in_ip: current_sign_in_ip  #g
+        email: email  #g
+        encrypted_password: encrypted_password  #g
+        events: events  #g
+        last_sign_in_at: last_sign_in_at  #g
+        last_sign_in_ip: last_sign_in_ip  #g
+        name: name  #g
+        organizing_events: organizing_events  #g
+        remember_created_at: remember_created_at  #g
+        reset_password_sent_at: reset_password_sent_at  #g
+        reset_password_token: reset_password_token  #g
