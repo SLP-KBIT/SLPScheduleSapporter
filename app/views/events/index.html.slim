@@ -24,3 +24,6 @@ h1 イベント
 
       .tab-pane#past
         = render 'list', events: @attended_finished_events
+coffee:
+  $ ->
+    $('.nav-tabs a:first').click()
