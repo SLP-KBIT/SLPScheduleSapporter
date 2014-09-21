@@ -14,16 +14,15 @@ h1 イベント
       li
         a href="#past" role="tab" data-toggle="tab" 参加済
 
-  .panel-body
-    .tab-content
-      .tab-pane#all
-        = render 'list', events: @events
+  .tab-content
+    .tab-pane#all
+      = render 'list', events: @events
 
-      .tab-pane#will
-        = render 'list', events: @attended_planning_events
+    .tab-pane#will
+      = render 'list', events: @attended_planning_events
 
-      .tab-pane#past
-        = render 'list', events: @attended_finished_events
+    .tab-pane#past
+      = render 'list', events: @attended_finished_events
 coffee:
   $ ->
     $('.nav-tabs a:first').click()
