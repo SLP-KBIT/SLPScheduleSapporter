@@ -40,8 +40,8 @@
 
       .panel-body
         - @event.photos.each do |photo|
-          = image_tag photo.image_url(:thumb)
-
+          a.group01 href=photo.image_url  title=@event.title
+            img src=photo.image_url(:thumb) width="100" alt=""
   .col-xs-4
     .attend-area
       = render 'attend', event: @event
@@ -52,3 +52,8 @@
         - @event.users.each do |user|
           - user = user.decorate
           li = user.name
+
+javascript:
+  $(document).ready(function(){
+    $(".group01").colorbox({rel:'group01', transition:"none", width:"70%", height:"70%"});
+  });
