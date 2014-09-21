@@ -27,4 +27,5 @@ class User < ActiveRecord::Base
   has_many :attends
   has_many :events, through: :attends
   has_many :events
+  has_many :photos
 end
