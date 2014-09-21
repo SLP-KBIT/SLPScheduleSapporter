@@ -39,8 +39,8 @@
           = render 'photo_form', photo: @event.photos.build
 
       .panel-body
-        - @event.photos.each do |photo|
-          a.group01 href=photo.image_url  title=@event.title
+        - @event.photos.select{ |e| ! e.image_url.nil? }.each do |photo|
+          a.group01 href=photo.image_url  title=(@event.title + "  投稿者：" + photo.user.name)
             img src=photo.image_url(:thumb) width="100" alt=""
   .col-xs-4
     .attend-area
