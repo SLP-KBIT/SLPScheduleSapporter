@@ -32,7 +32,12 @@ h2 = @event.title
       | 写真投稿
     = render 'photo_form', photo: @event.photos.build
     - @event.photos.each do |photo|
-      = image_tag photo.image_url(:thumb)
+      a.group01 href=photo.image_url  title=@event.title
+        img src=photo.image_url(:thumb) width="100" alt=""
+    javascript:
+      $(document).ready(function(){
+        $(".group01").colorbox({rel:'group01', transition:"none", width:"70%", height:"70%"});
+      });
   .col-xs-4
     = render 'attend', event: @event
 

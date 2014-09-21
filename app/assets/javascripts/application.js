@@ -15,4 +15,5 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require jquery.datetimepicker
+//= require jquery.colorbox-min
 //= require_tree .
