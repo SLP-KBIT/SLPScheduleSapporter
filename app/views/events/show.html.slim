@@ -28,6 +28,11 @@ h2 = @event.title
         th 概要
         td = @event.content
 
+    button.btn.btn-sm.btn-success data-toggle="modal" data-target=".photo-modal"
+      | 写真投稿
+    = render 'photo_form', photo: @event.photos.build
+    - @event.photos.each do |photo|
+      = image_tag photo.image_url(:thumb)
   .col-xs-4
     = render 'attend', event: @event
 

@@ -17,6 +17,7 @@
 config/database.yml
 .direnv/
 .envrc
+public/uploads/
 
 # Created by https://www.gitignore.io
 
@@ -103,4 +104,3 @@ Session.vim
 
 # KDE directory preferences
 .directory
-
